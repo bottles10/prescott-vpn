@@ -23,8 +23,13 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <main class="container mx-auto mt-28 px-5 flex">
+  <body class="bg-black/90">
+     <header class="sticky top-0 h-20">
+      <div id="flash" class="w-max mt-2 ml-auto px-6">
+        <%= render partial: "layouts/shared/flash" %>
+      </div>
+    </header>
+    <main class=" max-w-2xl mx-auto mt-28 p-5 ">
       <%= yield %>
     </main>
   </body>
