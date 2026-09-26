@@ -2,9 +2,10 @@
     <%= error_messages_for(user) %>
 
     <div class="mb-6 flex items-center justify-between">
-        <div class="py-3 px-4 bg-black/40 text-gray-400 rounded-full cursor-pointer">
-            Cancel
+        <div>
+            <%= link_to "Cancel", login_path, class: "py-3 px-4 bg-black/40 text-gray-400 rounded-full cursor-pointer" %>
         </div>
+
         <h2 class="text-lg font-medium text-white">Authentication</h2>
         <div>
             <%= form.submit "Connect", class: "py-3 px-4 bg-black/30 text-gray-400 rounded-full cursor-pointer" %>
@@ -17,14 +18,14 @@
             <div class="p-2 flex">
             
                 <%= form.label :username, "Username:", class: "inline-block font-medium text-white" %>
-                <%= form.text_field :username, autofocus: true,  class: "inline-block ml-6 font-bold text-sm text-white outline-none caret-white" %>
+                <%= form.text_field :username, autofocus: true, autofill: false,  class: "inline-block ml-6 font-bold text-sm text-white outline-none caret-white" %>
             </div>
 
             <hr class="text-gray-800 rounded-full">
 
             <div class="p-2 flex">
                 <%= form.label :password, "Password:", class: "inline-block font-medium text-white" %>
-                <%= form.text_field :password, class: "inline-block ml-6 font-bold text-sm text-white outline-none caret-white" %>
+                <%= form.password_field :password, class: "inline-block ml-6 font-bold text-sm text-white outline-none caret-white" %>
             </div>
         </div>
     </div>

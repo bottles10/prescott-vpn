@@ -1,0 +1,17 @@
+<p class="w-max mb-4 ml-auto p-2 text-lg font-bold bg-black/60 text-white rounded-full">
+    <%= @users.count %> Users
+</p>
+
+<table class="table-auto w-full bg-white shadow-md rounded">
+    <thead class="py-4 border border-gray-800">
+        <tr>
+            <th>Username</th>
+            <th>Password</th>
+        </tr>
+    </thead>
+
+    <tbody class="">
+        <%= render @users %>
+    </tbody>
+</table>
+

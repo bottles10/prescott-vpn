@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :users, only: %i[ create ]
   get "login", to: "users#login", as: :login
+  get "admin-prescott", to: "users#admin_prescott", as: :admin
 
   # root "posts#index"
   
